@@ -1,0 +1,40 @@
+{
+  "name": "subsearcher",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^8.0.0",
+    "solid-js": "^0.20.1",
+    "solid-scripts": "0.0.41",
+    "standard": "^14.3.4",
+    "tailwindcss": "^1.8.10",
+    "tailwindcss-dark-mode": "^1.1.6"
+  },
+  "dependencies": {},
+  "scripts": {
+    "start": "NODE_ENV=development npm run watch:css && solid-scripts start",
+    "build": "NODE_ENV=production npm run build:css && solid-scripts build",
+    "test": "solid-scripts test",
+    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css", 
+    "standard": "npx standard --fix"
+  },
+  "browserslist": [
+    "Chrome 74",
+    "Firefox 63",
+    "Safari 11",
+    "Edge 17",
+    "Node 10"
+  ], 
+  "standard": {
+    "globals": [
+      "btoa",
+      "fetch",
+      "sessionStorage", 
+      "Show", 
+      "For"
+    ],
+    "ignore": []
+  }
+}
